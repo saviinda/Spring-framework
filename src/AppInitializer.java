@@ -40,6 +40,9 @@ public class AppInitializer {
         MyConnection bean = ctx.getBean(MyConnection.class);
         System.out.println(bean);
 
+        //@Bean , bean id -> bean method name
+        //MyConnection myConnection = (MyConnection) ctx.getBean("getConnection");
+        //System.out.println(myConnection);
 
     }
 }
