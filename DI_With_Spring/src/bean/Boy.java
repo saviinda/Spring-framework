@@ -1,16 +1,21 @@
 package bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Boy {
+    //@Qualifier("girlTwo")
+    @Autowired
+    GoodGirl girl;
     public Boy(){
         System.out.println("Boy Instantiated");
     }
 
 
     public void chattingWithGirl(){
-        Girl girl = new Girl();
+      //  GoodGirl girl = new GirlOne();
         girl.chat();
     }
 
